@@ -36,7 +36,7 @@ Training epoches: 66,666
 The neural csv file contains a total of 8192 samples extrapolated/interpolated from the sample rate you trained the network at.
 
 `python3 fit.py <layers> <unit per layer> <training batches> <activation function> <optimiser> <cpu train only 0/1> <training sample resolution> <training epoches>`
-- <layers>: The amount of layers in the Feed-forward Neural Network.
+- <<layers>>: The amount of layers in the Feed-forward Neural Network.
 - <unit per layer>: How many perceptron units per layer of the network.
 - <training batches>: How many forward passes to average together before doing a backpropergation pass.
 - <activation function>: The activation function used by the hidden layers of the neural network, the output layer is always linear.
