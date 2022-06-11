@@ -19,16 +19,16 @@ Training epoches: 66,666
 
 With such a small network the initial results were quite impressive;
 
-At 64 samples accurate to what the network was trained at:
+<center><b>At 64 samples accurate to what the network was trained at.</b></center>
 ![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png)
 
-At 256 samples interpolated to 4x the original sample resolution:
+<center><b>At 256 samples interpolated to 4x the original sample resolution.</b></center>
 ![256 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/256.png)
 
-At 512 samples interpolated to 8x the original sample resolution:
+<center><b>At 512 samples interpolated to 8x the original sample resolution.</b></center>
 ![512 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/512.png)
 
-At 8192 samples interpolated to 128x the original sample resolution:
+<center><b>At 8192 samples interpolated to 128x the original sample resolution.</b></center>
 ![8192 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/8192.png)
 
 ## Argv
