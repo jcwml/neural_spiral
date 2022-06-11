@@ -17,7 +17,7 @@ Training samples: 64
 Training epoches: 66,666
 ```
 
-With such a small network the initial results were quite impressive;
+## With such a small network the initial results were quite impressive, the original CPU spiral in red and the Neural spiral in green;
 
 ### At 64 samples accurate to what the network was trained at.
 ![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png)
