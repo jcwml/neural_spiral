@@ -19,9 +19,9 @@ Training epoches: 66,666
 With such a small network the initial results were quite impressive, the original CPU spiral in red and the Neural spiral in green;
 
 
-64 samples  | 256 samples (4x
+64 samples  | 256 samples (4x)
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| ![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png)  | ![256 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/256.png)  |
 | Content Cell  | Content Cell  |
 
 
