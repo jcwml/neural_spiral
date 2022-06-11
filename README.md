@@ -19,7 +19,7 @@ Training epoches: 66,666
 
 With such a small network the initial results were quite impressive;
 
-<center><b>At 64 samples accurate to what the network was trained at.</b></center>
+<center><b>At 64 samples accurate to what the network was trained at.</b></center><br>
 ![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png)
 
 <center><b>At 256 samples interpolated to 4x the original sample resolution.</b></center>
