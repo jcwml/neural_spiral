@@ -1,9 +1,9 @@
 # neural_spiral
 A Feed-forward Neural Network trained to interpolate a spiral.
 
-## Intro
 This is an experiment to see how well a simple Feed-forward Neural Network can map a spiral function and interpolate between the mapped points of resolution.
 
+## Demo
 In this example I have trained the network to learn 64 points on the spiral and then the other points between them the neural network has to guess. The input to the neural network is just one normalised float between 0-1 which defines at what position the neural network should return an x,y position on the spiral for, thus making the network have only two outputs.
 
 **Network Topology**
