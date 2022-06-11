@@ -18,9 +18,9 @@ Training epoches: 66,666
 ```
 With such a small network the initial results were quite impressive, the original CPU spiral in red and the Neural spiral in green;
 
-| 64 samples  | 256 samples (4x) | 512 samples (8x) | 8192 samples (128x) |
-| ------------- | ------------- |
-| ![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png) | ![256 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/256.png) | ![512 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/512.png) | ![8192 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/8192.png) |
+64 samples  | 256 samples (4x) | 512 samples (8x) | 8192 samples (128x)
+------------- | -------------
+![64 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/64.png) | ![256 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/256.png) | ![512 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/512.png) | ![8192 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/8192.png)
 
 ## With such a small network the initial results were quite impressive, the original CPU spiral in red and the Neural spiral in green;
 
