@@ -19,7 +19,7 @@ Training epoches: 66,666
 With such a small network the initial results were quite impressive, the original CPU spiral in red and the Neural spiral in green;
 
 
-| First Header  | Second Header |
+64 samples  | 256 samples (4x
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
