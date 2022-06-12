@@ -28,7 +28,7 @@ Training epoches: 66,666
 ------------- | -------------
 ![512 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/512.png) | ![8192 Samples](https://raw.githubusercontent.com/jcwml/neural_spiral/main/models/M1/8192.png)
 
-**Hunting for the best model;
+**Hunting for the best model;<br>
 [activation, optimiser, layers, units per layer, batches, sample resolution, epoches, [accuracy]]**
 
 tanh_adam_3_8_6_64_100000 [0.95]  | tanh_adam_6_32_6_64_30000 [0.98]
