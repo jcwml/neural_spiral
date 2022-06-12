@@ -1,4 +1,6 @@
 // github.com/jcwml
+// https://tronche.com/gui/x/xlib/
+// https://tronche.com/gui/x/xlib/appendix/b/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -151,6 +153,9 @@ int main(int ac, char** av)
     XSelectInput(d, w, StructureNotifyMask);
     XMapWindow(d, w);
 
+    Cursor c = XCreateFontCursor(d, 34);
+    XDefineCursor(d, w, c);
+
     XEvent e;
     do{XNextEvent(d, &e);}while(e.type != MapNotify);
     draw();
@@ -173,9 +178,9 @@ int main(int ac, char** av)
             break;
     } 
 
+    XFreeCursor(d, c);
     XDestroyWindow(d, w);
     XCloseDisplay(d);
 
     return 0;
 }
-
