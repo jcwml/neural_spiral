@@ -1,0 +1,1 @@
+./main 64 models/tanh_adam_3_8_6_64_100000_[0.95]_pd.csv 64
