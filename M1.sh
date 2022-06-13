@@ -1,1 +1,1 @@
-./main 64 models/M1/tanh_adam_3_8_3_64_66666_[0.85]_pd.csv 64
+./main models/M1/tanh_adam_3_8_3_64_66666_[0.85]_pd.csv 64

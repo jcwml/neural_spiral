@@ -1,1 +1,1 @@
-./main 64 models/selu_adam_6_32_6_512_30000_[0.99]_pd.csv 64
+./main models/selu_adam_6_32_6_512_30000_[0.99]_pd.csv 64

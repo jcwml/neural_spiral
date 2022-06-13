@@ -62,8 +62,8 @@ static inline void sfunc(int* x, int* y, float m)
 {
     const float sr = 333.f;
     const float st = 33.f;
-    *x = sinf(m*st)*sr*m;
-    *y = cosf(m*st)*sr*m;
+    *x = quantise_float(sinf(m*st)*sr*m);
+    *y = quantise_float(cosf(m*st)*sr*m);
 }
 
 void draw()
@@ -115,29 +115,23 @@ void draw()
 
 int main(int ac, char** av)
 {
-    // printf("Hello from TensorFlow C library version %s\n", TF_Version());
-
-    if(ac >= 2)
+    if(ac >= 3)
     {
-        max_iter = atoi(av[1]);
+        max_iter = atoi(av[2]);
         if(max_iter > 1024)
             max_iter = 1024;
         else if(max_iter < 8)
             max_iter = 8;
     }
+    if(ac >= 2)
+        loadPredictions(av[1]);
     rmi = 1.f / ((float)max_iter);
 
-    if(ac >= 3)
-        loadPredictions(av[2]);
-
-    if(ac >= 4)
-    {
-        neural_skip = 8192 / max_iter;
-        if(neural_skip > 1024)
-            neural_skip = 1024;
-        else if(neural_skip == 0)
-            neural_skip = 1;
-    }
+    neural_skip = 8192 / max_iter;
+    if(neural_skip > 1024)
+        neural_skip = 1024;
+    else if(neural_skip == 0)
+        neural_skip = 1;
 
     d = XOpenDisplay(NULL);
     if(d == NULL){return 0;}
