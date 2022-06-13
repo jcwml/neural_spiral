@@ -1,2 +1,2 @@
-gcc main.c -lX11 -lm -o main
+gcc main.c -Ofast -lX11 -lm -o main
 ./main

@@ -122,6 +122,8 @@ int main(int ac, char** av)
         max_iter = atoi(av[1]);
         if(max_iter > 1024)
             max_iter = 1024;
+        else if(max_iter < 8)
+            max_iter = 8;
     }
     rmi = 1.f / ((float)max_iter);
 
@@ -130,7 +132,7 @@ int main(int ac, char** av)
 
     if(ac >= 4)
     {
-        neural_skip = 8192 / atoi(av[3]);
+        neural_skip = 8192 / max_iter;
         if(neural_skip > 1024)
             neural_skip = 1024;
         else if(neural_skip == 0)
@@ -150,7 +152,7 @@ int main(int ac, char** av)
     gc = XCreateGC(d, w, 0, NULL);
     Atom wmDel = XInternAtom(d, "WM_DELETE_WINDOW", False);
     XSetWMProtocols(d, w, &wmDel, 1);
-    XSelectInput(d, w, StructureNotifyMask);
+    XSelectInput(d, w, StructureNotifyMask|ButtonPressMask);
     XMapWindow(d, w);
 
     Cursor c = XCreateFontCursor(d, 34);
@@ -174,6 +176,37 @@ int main(int ac, char** av)
                 draw();
             }
         }
+        else if(e.type == ButtonPress)
+        {
+            if(max_iter > 8)
+            {
+                if(e.xbutton.button == Button5)
+                    max_iter--;
+                
+                rmi = 1.f / ((float)max_iter);
+            }
+            if(max_iter < 1024)
+            {
+                if(e.xbutton.button == Button4)
+                    max_iter++;
+
+                rmi = 1.f / ((float)max_iter);
+            }
+            
+            if(max_iter == 0)
+                neural_skip = 8192;
+            else
+                neural_skip = 8192 / max_iter;
+
+            if(neural_skip > 1024)
+                neural_skip = 1024;
+            else if(neural_skip == 0)
+                neural_skip = 1;
+
+            draw();
+        }
+        else if(e.type == Expose)
+            draw();
         else if(e.type == ClientMessage && e.xclient.data.l[0] == wmDel)
             break;
     } 
@@ -184,3 +217,4 @@ int main(int ac, char** av)
 
     return 0;
 }
+
