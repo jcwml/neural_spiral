@@ -80,7 +80,7 @@ if argc >= 9:
 
 # make sure save dir exists
 if not isdir('models'): mkdir('models')
-model_name = 'models/' + activator + '_' + optimiser + '_' + sys.argv[1] + '_' + sys.argv[2] + '_' + sys.argv[3] + '_' + sys.argv[7] + '_' + sys.argv[8]
+model_name = 'models/' + activator + '_' + optimiser + '_' + str(layers) + '_' + str(layer_units) + '_' + str(batches) + '_' + str(samples) + '_' + str(epoches)
 
 ##########################################
 #   CREATE DATASET
